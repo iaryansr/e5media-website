@@ -389,3 +389,12 @@ p {
 .faq-answer.active {
   max-height: 500px; /* Adjust as needed */
 }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.active {
+  max-height: 500px; /* Enough to show answer text */
+}
