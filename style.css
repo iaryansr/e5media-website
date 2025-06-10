@@ -380,3 +380,12 @@ p {
 .faq-item.active .faq-answer {
   display: block;
 }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.active {
+  max-height: 500px; /* Adjust as needed */
+}
