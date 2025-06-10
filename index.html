@@ -175,6 +175,26 @@
 </footer>
 <!-- partial -->
   <script  src="./script.js"></script>
+<script>
+  // Select all FAQ question buttons
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+
+      // Toggle "active" class
+      answer.classList.toggle('active');
+
+      // Toggle visibility
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
