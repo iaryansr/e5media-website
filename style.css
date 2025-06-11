@@ -271,7 +271,7 @@ p {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #e36414;
+  border: 4px solid #1B082F;
 }
 .founder-info {
   flex: 1;
