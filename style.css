@@ -269,7 +269,7 @@ p {
 .founder-image img {
   width: 250px;
   height: 350px;
-  border-radius: 50%;
+  border-radius: 12px;
   object-fit: cover;
   border: 4px solid #1B082F;
 }
