@@ -396,8 +396,8 @@ p {
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .faq-question {
@@ -419,19 +419,23 @@ p {
 }
 
 .faq-answer {
-  display: none;
-  padding: 16px 20px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
   background-color: #fafafa;
   border-left: 3px solid #f26b1d;
   color: #333;
   font-size: 15px;
   border-radius: 0 0 8px 8px;
-  animation: fadeIn 0.3s ease-in-out;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  line-height: 1.7;
 }
 
 .faq-item.active .faq-answer {
-  display: block;
+  max-height: 1000px;
+  padding: 16px 20px;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
