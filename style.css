@@ -441,3 +441,49 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 html { scroll-behavior: smooth; }
+/* ─────────────────────────────────────────────
+   MOBILE‑ONLY NAVBAR TWEAKS  (≤ 768 px wide)
+   ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Let items wrap instead of leaking sideways */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* 2️⃣ Rearranged navbar layout for mobile */
+  .logo {
+    order: 1;
+  }
+
+  .nav-links {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .nav-cta {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+
+  /* 3️⃣ Text sizing for smaller screens */
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+
+  .nav-cta .btn {
+    font-size: 0.9rem;
+    padding: 0.55rem 1.1rem;
+  }
+}
+
+/* Optional: Prevent horizontal scrolling on small screens */
+body {
+  overflow-x: hidden;
+}
